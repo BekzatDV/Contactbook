@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./image/pexels-eberhard-grossgasteiger-691668.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #9ba2a9;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.block {
+  width: 30%;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inp_name {
+  width: 65%;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+}
+
+.inp_surname {
+  width: 65%;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+}
+
+.inp_photo {
+  width: 65%;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+}
+
+.inp_number {
+  width: 65%;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+}
+.inp_number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.inp_email {
+  width: 65%;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+}
+
+.block__btn {
+  display: contents;
+}
+
+.btn {
+  width: 50%;
+  height: 50px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.block__list {
+  width: 85%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 135px;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 7px;
+  margin: 1rem;
+}
+
+.img_URL {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 100%;
+  margin-left: 1rem;
+}
+
+.block__list-card {
+  margin-left: 1rem;
+  list-style: none;
+  color: white;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+h3 {
+  margin: 0;
+}

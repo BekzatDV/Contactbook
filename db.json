@@ -19,8 +19,8 @@
     {
       "name": "Катя",
       "surname": "Катериновна",
-      "photo": "https://avatars.mds.yandex.net/i?id=9de5ffeb6789c9fec5214192657282fc7d5a8d31-8272935-images-thumbs&n=13",
-      "number": "996777123456",
+      "photo": "https://i.pinimg.com/736x/f2/96/cd/f296cda51fc2b175ea910e690f338330.jpg",
+      "number": "9967771234569",
       "email": "katya@gmail.com",
       "id": 3
     },
@@ -39,6 +39,14 @@
       "number": "996777123456",
       "email": "jhon@gmail.com",
       "id": 5
+    },
+    {
+      "name": "Эмир",
+      "surname": "Джунушов",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Macaca_nigra_self-portrait_large.jpg/220px-Macaca_nigra_self-portrait_large.jpg",
+      "number": "54534",
+      "email": "emir@gmail.com",
+      "id": 6
     }
   ]
 }

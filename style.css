@@ -7,6 +7,12 @@ body {
   background-color: #9ba2a9;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -116,4 +122,112 @@ header {
 
 h3 {
   margin: 0;
+}
+
+.btn-delete {
+  height: 30px;
+  width: 55%;
+  border: none;
+  border-radius: 5px;
+  background-color: crimson;
+  font-size: 14px;
+  margin-left: 70px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 30%;
+  height: 560px;
+  border-radius: 10px;
+  position: absolute;
+  top: 2rem;
+  display: none;
+}
+
+.inp-name {
+  width: 65%;
+  height: 50px;
+  font-size: 17px;
+  margin: 10px 0px 10px 70px;
+}
+.inp-surname {
+  width: 65%;
+  height: 50px;
+  font-size: 17px;
+  margin: 10px 0px 10px 70px;
+}
+.inp-photo {
+  width: 65%;
+  height: 50px;
+  font-size: 17px;
+  margin: 10px 0px 10px 70px;
+}
+.inp-number {
+  width: 65%;
+  height: 50px;
+  font-size: 17px;
+  margin: 10px 0px 10px 70px;
+}
+.inp-email {
+  width: 65%;
+  height: 50px;
+  font-size: 17px;
+  margin: 10px 0px 10px 70px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.block-close {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-top: 36px;
+}
+
+.btn-close {
+  width: 35%;
+  height: 40px;
+  font-size: 15px;
+  background-color: bisque;
+  border: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.block-save {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-save {
+  width: 67%;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: aquamarine;
+}
+
+.inp-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.btnsDeleteEdit {
+  display: flex;
+  width: 132%;
+}
+
+.btn-edit {
+  height: 30px;
+  width: 55%;
+  border: none;
+  border-radius: 5px;
+  background-color: deepskyblue;
+  font-size: 14px;
+  margin-left: 5px;
 }

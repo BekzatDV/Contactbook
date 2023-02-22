@@ -1,4 +1,4 @@
-let API = "http://localhost:8001/contactbook";
+let API = "http://localhost:8000/contactbook";
 let list = document.querySelector(".list");
 let btn = document.querySelector(".btn");
 let inp = document.querySelectorAll("input");
@@ -70,6 +70,10 @@ function render(contactbook) {
         <h3 class="list__item" >${item.surname}</h3>
         <li class="list__item" >${item.email}</li>
         <li class="list__item" >${item.number}</li>
+        <div class="btnsDeleteEdit">
+        <button class="btn-delete" onclick="deleteTodo(${item.id})">Delete</button>
+        <button class="btn-edit" onclick="editContactbook(${item.id})">Edit</button>
+        </div>
       </div>
   </div>
         `;
@@ -77,3 +81,85 @@ function render(contactbook) {
 }
 
 getContactbook();
+
+// DELETE
+async function deleteTodo(id) {
+  try {
+    await fetch(`${API}/${id}`, { method: "DELETE" });
+    getContactbook();
+  } catch (error) {
+    console.log(error);
+  }
+}
+// DELETE
+
+// EDIT
+let inpName = document.querySelector(".inp-name");
+let inpSurname = document.querySelector(".inp-surname");
+let inpPhoto = document.querySelector(".inp-photo");
+let inpNumber = document.querySelector(".inp-number");
+let inpEmail = document.querySelector(".inp-email");
+let btnClose = document.querySelector(".btn-close");
+let btnSave = document.querySelector(".btn-save");
+let modal = document.querySelector(".modal");
+
+let editedContactbook = {};
+
+inpName.addEventListener("input", (e) => {
+  editedContactbook.name = e.target.value;
+});
+inpSurname.addEventListener("input", (e) => {
+  editedContactbook.surname = e.target.value;
+});
+inpPhoto.addEventListener("input", (e) => {
+  editedContactbook.photo = e.target.value;
+});
+inpNumber.addEventListener("input", (e) => {
+  editedContactbook.number = e.target.value;
+});
+inpEmail.addEventListener("input", (e) => {
+  editedContactbook.email = e.target.value;
+});
+
+async function editContactbook(id) {
+  modal.style.display = "block";
+  try {
+    let res = await fetch(`${API}/${id}`);
+    let objToEdited = await res.json();
+
+    inpName.value = objToEdited.name;
+    inpSurname.value = objToEdited.surname;
+    inpPhoto.value = objToEdited.photo;
+    inpNumber.value = objToEdited.number;
+    inpEmail.value = objToEdited.email;
+    btnSave.setAttribute("id", `${id}`);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+btnSave.addEventListener("click", async (e) => {
+  let id = e.target.id;
+
+  try {
+    await fetch(`${API}/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+      body: JSON.stringify(editedContactbook),
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  getContactbook();
+});
+
+btnClose.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+btnSave.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+// EDIT
